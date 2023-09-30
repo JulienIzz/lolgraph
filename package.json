@@ -10,7 +10,8 @@
     "test:types": "tsc",
     "test:lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy content --cache-location .cache/eslint.json",
     "test:jest": "jest --watch --runInBand --bail",
-    "test:jest:ci": "jest"
+    "test:jest:ci": "jest",
+    "commit": "cz"
   },
   "dependencies": {
     "expo": "~49.0.13",
@@ -29,6 +30,8 @@
     "@types/react-native": "^0.72.3",
     "@types/react-test-renderer": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "latest",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.50.0",
     "eslint-plugin-prettier": "latest",
     "eslint-plugin-react": "latest",
@@ -42,5 +45,10 @@
     "typescript": "^5.1.6"
   },
   "private": true,
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@3.6.3",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
