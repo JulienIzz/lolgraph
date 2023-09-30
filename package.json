@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test:types": "tsc"
+    "test:types": "tsc",
+    "test:lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy content --cache-location .cache/eslint.json"
   },
   "dependencies": {
     "expo": "~49.0.13",
@@ -17,10 +18,21 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@bam.tech/eslint-plugin": "^1.0.1",
+    "@types/eslint": "^8",
     "@types/jest": "^29.5.5",
+    "@types/prettier": "^3",
     "@types/react": "^18.2.23",
     "@types/react-native": "^0.72.3",
     "@types/react-test-renderer": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "eslint": "^8.50.0",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-native": "latest",
+    "eslint-plugin-unused-imports": "latest",
+    "prettier": "^3.0.3",
     "typescript": "^5.1.6"
   },
   "private": true,
