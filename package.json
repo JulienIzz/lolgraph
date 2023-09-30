@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test:types": "tsc"
   },
   "dependencies": {
     "expo": "~49.0.13",
@@ -16,8 +17,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/react": "~18.2.14",
-    "typescript": "^5.1.3"
+    "@types/jest": "^29.5.5",
+    "@types/react": "^18.2.23",
+    "@types/react-native": "^0.72.3",
+    "@types/react-test-renderer": "^18.0.3",
+    "typescript": "^5.1.6"
   },
   "private": true,
   "packageManager": "yarn@3.6.3"
