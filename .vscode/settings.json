@@ -19,5 +19,10 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.test.ts, ${capture}.test.ts.snap",
+    "*.tsx": "${capture}.test.tsx, ${capture}.test.tsx.snap"
   }
 }

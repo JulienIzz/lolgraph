@@ -8,7 +8,9 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test:types": "tsc",
-    "test:lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy content --cache-location .cache/eslint.json"
+    "test:lint": "eslint . --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --max-warnings 0 --cache --cache-strategy content --cache-location .cache/eslint.json",
+    "test:jest": "jest --watch --runInBand --bail",
+    "test:jest:ci": "jest"
   },
   "dependencies": {
     "expo": "~49.0.13",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@bam.tech/eslint-plugin": "^1.0.1",
+    "@sucrase/jest-plugin": "^3.0.0",
     "@types/eslint": "^8",
     "@types/jest": "^29.5.5",
     "@types/prettier": "^3",
@@ -32,6 +35,9 @@
     "eslint-plugin-react-hooks": "latest",
     "eslint-plugin-react-native": "latest",
     "eslint-plugin-unused-imports": "latest",
+    "jest": "^29.7.0",
+    "jest-expo": "^49.0.0",
+    "jest-watch-typeahead": "^2.2.2",
     "prettier": "^3.0.3",
     "typescript": "^5.1.6"
   },
