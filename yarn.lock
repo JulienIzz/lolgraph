@@ -3004,6 +3004,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tanstack/query-core@npm:4.35.7":
+  version: 4.35.7
+  resolution: "@tanstack/query-core@npm:4.35.7"
+  checksum: b82600ee0b2cea085eb6065d36bf944f4fff72b3fa575b5aa55590498fa431f951c5557a4e7ee36ae5b5de5fd5856cb841b974ff6f78cf773199f0f8c860b6c8
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:^4.35.7":
+  version: 4.35.7
+  resolution: "@tanstack/react-query@npm:4.35.7"
+  dependencies:
+    "@tanstack/query-core": 4.35.7
+    use-sync-external-store: ^1.2.0
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: ba4e1aa883a42424085c81d44816fb7ee8efdc8c8d1c190320e78818ce8a45cfcafd2a9c0e217d19ff25b0ec58592c98f5286b5a9b738a799c3ee016a02f9447
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -8933,6 +8959,7 @@ __metadata:
     "@babel/core": ^7.20.0
     "@bam.tech/eslint-plugin": ^1.0.1
     "@sucrase/jest-plugin": ^3.0.0
+    "@tanstack/react-query": ^4.35.7
     "@types/eslint": ^8
     "@types/jest": ^29.5.5
     "@types/prettier": ^3
@@ -12504,37 +12531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 05823f21796d450531a7e4ab299715d38fd9ded0e4ce7400876053f4b5166ca3dde7a68cecfe72d9086039f03c0b6edba36516fb10ed83c5837d9600532ea4c2
-  languageName: node
-  linkType: hard
-
-"typescript@npm:^4.6.4 || ^5.0.0":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 7912821dac4d962d315c36800fe387cdc0a6298dba7ec171b350b4a6e988b51d7b8f051317786db1094bd7431d526b648aba7da8236607febb26cf5b871d2d3c
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@4.4.3#~builtin<compat/typescript>":
-  version: 4.4.3
-  resolution: "typescript@patch:typescript@npm%3A4.4.3#~builtin<compat/typescript>::version=4.4.3&hash=bbeadb"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 33a916819907e819430802c50405f18c187448d678696a81545f494a7ec16207f8c15340c945df62109bd1d951091a9f15f3d2eb931a3c889f962c8509017697
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.6.4 || ^5.0.0#~builtin<compat/typescript>, typescript@patch:typescript@^5.1.6#~builtin<compat/typescript>":
   version: 5.2.2
   resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=f3b441"
   bin:
@@ -12742,7 +12739,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:^1.0.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:
