@@ -31,6 +31,15 @@ const config = {
   clearMocks: true,
   // module resolution
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleNameMapper: {
+    // Keep in sync with metro.config.js and tsconfig.json
+    "#app/(.*)": "<rootDir>/src/app/$1",
+    "#modules/(.*)": "<rootDir>/src/modules/$1",
+    "#shared/(.*)": "<rootDir>/src/shared/$1",
+    "#testing/(.*)": "<rootDir>/src/testing/$1",
+    "#mnet/(.*)": "<rootDir>/mnet-api/__generated__/$1",
+    "#assets/(.*)": "<rootDir>/assets/$1",
+  },
   testRegex: "\\.test\\.[jt]sx?$",
   // module transformation
   transform: {

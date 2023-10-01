@@ -25,7 +25,16 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "paths": {
+      // Keep in sync with jest.config.js and metro.config.js
+      "#app/*": ["./src/app/*"],
+      "#modules/*": ["./src/modules/*"],
+      "#shared/*": ["./src/shared/*"],
+      "#testing/*": ["./src/testing/*"],
+      "#mnet/*": ["./mnet-api/__generated__/*"],
+      "#assets/*": ["./assets/*"]
+    }
   },
   "exclude": [
     "node_modules",
