@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home screen with title is correctly rendered 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RCTSafeAreaView
+    style={
+      [
+        {
+          "backgroundColor": "#00B4D8",
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 60,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 20,
+              "fontWeight": "bold",
+            },
+            undefined,
+          ]
+        }
+      >
+        MyLEAGUE
+      </Text>
+    </View>
+  </RCTSafeAreaView>
+  <View />
+</View>
+`;
