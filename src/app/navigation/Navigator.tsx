@@ -5,6 +5,7 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { RootStackParamList } from "./Types";
 
 import { Home } from "../../modules/home/Home.screen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -14,14 +15,16 @@ export const Navigator = () => {
   return (
     <NavigationContainer>
       <QueryClientProvider client={queryClient}>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-          }}
-          initialRouteName="Home"
-        >
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
+        <SafeAreaProvider>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+            }}
+            initialRouteName="Home"
+          >
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </SafeAreaProvider>
       </QueryClientProvider>
     </NavigationContainer>
   );
