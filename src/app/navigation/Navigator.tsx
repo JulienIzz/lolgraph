@@ -6,6 +6,7 @@ import { RootStackParamList } from "./Types";
 
 import { Home } from "../../modules/home/Home.screen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { ProfilePage } from "../../modules/profile/ProfilePage";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -23,6 +24,7 @@ export const Navigator = () => {
             initialRouteName="Home"
           >
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="Profile" component={ProfilePage} />
           </Stack.Navigator>
         </SafeAreaProvider>
       </QueryClientProvider>
