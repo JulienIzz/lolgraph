@@ -1,7 +1,9 @@
 import { HomeRouteProps } from "../../modules/home/Home.screen";
+import { ProfileRouteProps } from "../../modules/profile/ProfilePage";
 
 export type RootStackParamList = {
   Home: HomeRouteProps;
+  Profile: ProfileRouteProps;
 };
 
 export type Routes = keyof RootStackParamList;
