@@ -10,7 +10,13 @@ import { ProfilePage } from "../../modules/profile/ProfilePage";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      suspense: true,
+    },
+  },
+});
 
 export const Navigator = () => {
   return (
