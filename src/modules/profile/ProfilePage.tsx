@@ -8,6 +8,7 @@ import { Spacer } from "../../shared/screen/Spacer";
 import { theme } from "../../shared/theme/theme";
 import { Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { useDDragonVersion } from "../../shared/api/ddragon.queries";
 
 export type ProfileRouteProps = { userId: string; server: string };
 
@@ -36,6 +37,7 @@ const ProfileBanner = ({ userId, server }: ProfileRouteProps) => {
     summonerName: userId,
     server,
   });
+  const dDragonVersion = useDDragonVersion();
 
   if (profileUniqueId === undefined) {
     return <NoSummonerFound />;
@@ -47,7 +49,7 @@ const ProfileBanner = ({ userId, server }: ProfileRouteProps) => {
         source={{
           uri:
             "https://ddragon.leagueoflegends.com/cdn/" +
-            "11.14.1" +
+            dDragonVersion +
             "/img/profileicon/" +
             profileIconId +
             ".png",
