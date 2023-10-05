@@ -3,12 +3,12 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../app/navigation/Types";
 import { useProfile } from "./profile.queries";
 import styled from "@emotion/native";
-import React from "react";
 import { Spacer } from "../../shared/screen/Spacer";
 import { theme } from "../../shared/theme/theme";
 import { Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useDDragonVersion } from "../../shared/api/ddragon.queries";
+import { QueryBoundaries } from "../../shared/utils/QueryBoundaries";
 
 export type ProfileRouteProps = { userId: string; server: string };
 
@@ -21,12 +21,12 @@ export const ProfilePage = ({ route }: ProfileScreenNavigationProp) => {
   return (
     <BaseScreenWithBack title={route.params.userId}>
       <ScreenWrapper>
-        <React.Suspense>
+        <QueryBoundaries>
           <ProfileBanner
             userId={route.params.userId}
             server={route.params.server}
           />
-        </React.Suspense>
+        </QueryBoundaries>
       </ScreenWrapper>
     </BaseScreenWithBack>
   );
