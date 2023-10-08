@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home screen with title is correctly rendered 1`] = `
+<View
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    insets={
+      {
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "top": 0,
+      }
+    }
+    style={
+      [
+        {
+          "backgroundColor": "#00B4D8",
+          "height": 60,
+          "paddingTop": 0,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "height": 30,
+            "left": 15,
+            "opacity": 1,
+            "position": "absolute",
+            "width": 30,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            [
+              {
+                "flex": 1,
+                "height": "100%",
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        />
+      </View>
+      <Text
+        style={
+          [
+            {
+              "fontSize": 20,
+              "fontWeight": "bold",
+            },
+            undefined,
+          ]
+        }
+      >
+        ScreenTitle
+      </Text>
+    </View>
+  </View>
+  <View />
+</View>
+`;
