@@ -9300,6 +9300,7 @@ __metadata:
     jest-watch-typeahead: ^2.2.2
     prettier: ^3.0.3
     react: 18.2.0
+    react-error-boundary: ^4.0.11
     react-native: 0.72.5
     react-native-element-dropdown: ^2.10.0
     react-native-safe-area-context: 4.6.3
@@ -11110,6 +11111,17 @@ __metadata:
     shell-quote: ^1.6.1
     ws: ^7
   checksum: a5be506a35ca027ba283f0efa7c0c9a818bd8b9b38b77081960423cc038b9f3ab3014970ed9cdd451b72a949bc279399daedb65931e8a44def0fb49c0a69f0a7
+  languageName: node
+  linkType: hard
+
+"react-error-boundary@npm:^4.0.11":
+  version: 4.0.11
+  resolution: "react-error-boundary@npm:4.0.11"
+  dependencies:
+    "@babel/runtime": ^7.12.5
+  peerDependencies:
+    react: ">=16.13.1"
+  checksum: b3c157fea4e8f78411e9aa0fbf5241f6907b66ede1cd8b7bb22faaeb0339ebeb3dc8e63bf90ef3f740bfa8fd994ca6edf975089cd371b664ad6c2735e7512d38
   languageName: node
   linkType: hard
 

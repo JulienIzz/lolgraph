@@ -1,5 +1,6 @@
 import styled from "@emotion/native";
 import { Header } from "./Header";
+import { QueryBoundaries } from "../utils/QueryBoundaries";
 
 interface ScreenProps {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ export const BaseScreenWithBack = ({ children, title }: ScreenProps) => {
   return (
     <Container>
       <Header backButton title={title} />
-      {children}
+      <QueryBoundaries>{children}</QueryBoundaries>
     </Container>
   );
 };
