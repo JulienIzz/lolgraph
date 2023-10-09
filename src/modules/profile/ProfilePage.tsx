@@ -21,7 +21,7 @@ export const ProfilePage = ({ route }: ProfileScreenNavigationProp) => {
   return (
     <BaseScreenWithBack title={route.params.userId}>
       <ScreenWrapper>
-        <QueryBoundaries>
+        <QueryBoundaries ErrorView={NoSummonerFound}>
           <ProfileBanner
             userId={route.params.userId}
             server={route.params.server}
@@ -33,15 +33,11 @@ export const ProfilePage = ({ route }: ProfileScreenNavigationProp) => {
 };
 
 const ProfileBanner = ({ userId, server }: ProfileRouteProps) => {
-  const { profileIconId, level, profileUniqueId } = useProfile({
+  const { profileIconId, level } = useProfile({
     summonerName: userId,
     server,
   });
   const dDragonVersion = useDDragonVersion();
-
-  if (profileUniqueId === undefined) {
-    return <NoSummonerFound />;
-  }
 
   return (
     <Container>
@@ -68,7 +64,7 @@ const NoSummonerFound = () => {
 
   return (
     <ErrorContainer>
-      <Text>No summoner found, please check input</Text>
+      <Text>No summoner found, please try again.</Text>
       <Spacer vertical={20} />
       <BackButtonTouchable onPress={() => navigation.goBack()}>
         <Text>Go back</Text>
