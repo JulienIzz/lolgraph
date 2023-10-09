@@ -1,8 +1,10 @@
-import { HomeRouteProps } from "../../modules/home/Home.screen";
+import { HomeRouteProps } from "../../modules/home/Home";
+import { ProfileInputRouteProps } from "../../modules/profile/ProfileInput";
 import { ProfileRouteProps } from "../../modules/profile/ProfilePage";
 
 export type RootStackParamList = {
   Home: HomeRouteProps;
+  ProfileInput: ProfileInputRouteProps;
   Profile: ProfileRouteProps;
 };
 
