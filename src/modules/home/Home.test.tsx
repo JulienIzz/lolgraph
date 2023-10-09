@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-import { ProfileInput } from "./ProfileInput";
+import { Home } from "./Home";
 
 jest.mock(
   "react-native-safe-area-context",
@@ -15,18 +15,24 @@ jest.mock("@react-navigation/native", () => ({
 }));
 
 test("home screen with title is correctly rendered", async () => {
-  const expectedHeaderTextForTest = "Profile";
+  const expectedHeaderTextForTest = "MyLEAGUE";
+  const expectedProfileButton = "Profile";
+  const expectedTimersButton = "Timers";
 
   render(
     <SafeAreaProvider>
       <NavigationContainer>
-        <ProfileInput />
+        <Home />
       </NavigationContainer>
     </SafeAreaProvider>,
   );
 
   const HeaderOutput = screen.getByText(expectedHeaderTextForTest);
+  const ProfileButtonOutput = screen.getByText(expectedProfileButton);
+  const TimersButtonOutput = screen.getByText(expectedTimersButton);
 
   expect(HeaderOutput).toBeTruthy();
+  expect(ProfileButtonOutput).toBeTruthy();
+  expect(TimersButtonOutput).toBeTruthy();
   expect(screen.toJSON()).toMatchSnapshot();
 });

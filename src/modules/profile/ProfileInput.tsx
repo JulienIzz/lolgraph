@@ -15,7 +15,7 @@ export const ProfileInput = () => {
   const [selectedServer, setSelectedServer] = useState<string | null>();
 
   return (
-    <BaseScreenWithBack title="MyLEAGUE">
+    <BaseScreenWithBack title="Profile">
       <Container>
         <Spacer vertical={75} />
         <ProfileNameInput
