@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react-native";
-import { Home } from "./Home.screen";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { ProfileInput } from "./ProfileInput";
 
 jest.mock(
   "react-native-safe-area-context",
@@ -20,7 +20,7 @@ test("home screen with title is correctly rendered", async () => {
   render(
     <SafeAreaProvider>
       <NavigationContainer>
-        <Home />
+        <ProfileInput />
       </NavigationContainer>
     </SafeAreaProvider>,
   );

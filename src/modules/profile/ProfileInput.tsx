@@ -7,9 +7,9 @@ import { Dropdown } from "react-native-element-dropdown";
 import { StyleSheet } from "react-native";
 import { theme } from "../../shared/theme/theme";
 
-export type HomeRouteProps = undefined;
+export type ProfileInputRouteProps = undefined;
 
-export const Home = () => {
+export const ProfileInput = () => {
   const navigation = useNavigation();
   const [input, setInput] = useState<string | null>();
   const [selectedServer, setSelectedServer] = useState<string | null>();
