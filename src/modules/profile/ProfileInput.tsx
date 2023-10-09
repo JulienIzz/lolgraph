@@ -1,4 +1,3 @@
-import { BaseScreenNoBack } from "../../shared/screen/BaseScreenNoBack";
 import { useNavigation } from "@react-navigation/native";
 import { useState } from "react";
 import styled from "@emotion/native";
@@ -6,6 +5,7 @@ import { Spacer } from "../../shared/screen/Spacer";
 import { Dropdown } from "react-native-element-dropdown";
 import { StyleSheet } from "react-native";
 import { theme } from "../../shared/theme/theme";
+import { BaseScreenWithBack } from "../../shared/screen/BaseScreenWithBack";
 
 export type ProfileInputRouteProps = undefined;
 
@@ -15,7 +15,7 @@ export const ProfileInput = () => {
   const [selectedServer, setSelectedServer] = useState<string | null>();
 
   return (
-    <BaseScreenNoBack title="MyLEAGUE">
+    <BaseScreenWithBack title="MyLEAGUE">
       <Container>
         <Spacer vertical={75} />
         <ProfileNameInput
@@ -48,7 +48,7 @@ export const ProfileInput = () => {
           <SearchButtonText>Search</SearchButtonText>
         </SearchButton>
       </Container>
-    </BaseScreenNoBack>
+    </BaseScreenWithBack>
   );
 };
 
